@@ -1,7 +1,9 @@
 var typed = new Typed('.typed', {
 	strings: [
-		'<p class="text-white element-typed">Cisco</p>',
-		'<p class="text-white element-typed">Fortinet</p>',
+		'<p class="text-white element-typed">Cisco Switches</p>',
+		'<p class="text-white element-typed">Cisco Access Points</p>',
+		'<p class="text-white element-typed">Cisco Wireless Controller</p>',
+		'<p class="text-white element-typed">Fortinet Firewall</p>',
 		'<p class="text-white element-typed">VPN IPsec</p>',
         '<p class="text-white element-typed">SD-WAN Configuration</p>'
 	],
