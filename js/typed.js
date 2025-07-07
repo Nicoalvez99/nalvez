@@ -1,5 +1,6 @@
 var typed = new Typed('.typed', {
 	strings: [
+		'<p class="text-white element-typed">Analista de Redes SSR</p>',
 		'<p class="text-white element-typed">Cisco Switches</p>',
 		'<p class="text-white element-typed">Cisco Access Points</p>',
 		'<p class="text-white element-typed">Cisco Wireless Controller</p>',
