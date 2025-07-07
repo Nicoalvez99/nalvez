@@ -1,8 +1,9 @@
 var typed = new Typed('.typed', {
 	strings: [
-		'<p class="text-white element-typed">Programador Frontend</p>',
-		'<p class="text-white element-typed">Programador Backend</p>',
-        '<p class="text-white element-typed">Programador full stack</p>'
+		'<p class="text-white element-typed">Cisco</p>',
+		'<p class="text-white element-typed">Fortinet</p>',
+		'<p class="text-white element-typed">VPN IPsec</p>',
+        '<p class="text-white element-typed">SD-WAN Configuration</p>'
 	],
 	//stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
 	typeSpeed: 30, // Velocidad en mlisegundos para poner una letra,
