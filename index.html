@@ -1,514 +1,504 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
-    <title>Nicolas Alvez - Porfolio</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Alvez | Redes & Desarrollo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/app.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            bg-color: #050505;
+        }
 
-    <!-- Scripts -->
-    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .network-grid {
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
 </head>
-<body>
-    <div id="default-modalProlinko" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-2xl max-h-full">
-            <!-- Modal content -->
-            <div class="relative bg-gray-700 rounded-lg shadow">
-                <!-- Modal header -->
-                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-white">
-                        Prolinko
-                    </h3>
-                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modalProlinko">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                        </svg>
-                        <span class="sr-only">Close modal</span>
-                    </button>
+
+<body class="bg-[#050505] text-slate-300 antialiased network-grid">
+
+    <nav class="fixed w-full z-50 backdrop-blur-md border-b border-white/5 bg-black/20">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="text-white font-bold tracking-tighter text-xl">
+                NICOLAS<span class="text-indigo-500">.ALVEZ</span>
+            </div>
+            <div class="hidden md:flex space-x-10 text-sm font-medium uppercase tracking-widest">
+                <a href="#perfil" class="hover:text-white transition">Perfil</a>
+                <a href="#infraestructura" class="hover:text-white transition">Redes</a>
+                <a href="#desarrollo" class="hover:text-white transition">Dev</a>
+                <a href="#contacto"
+                    class="px-5 py-2 bg-white text-black rounded-full hover:bg-indigo-500 hover:text-white transition-all">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div data-aos="fade-right">
+                <span class="mono text-indigo-400 text-sm mb-4 block">// Analista de Redes & Web Dev</span>
+                <h1 class="text-6xl md:text-8xl font-extrabold text-white leading-none mb-6">
+                    Conectando <br> <span class="gradient-text">Sistemas.</span>
+                </h1>
+                
+                <div class="flex space-x-4">
+                    <a href="#infraestructura"
+                        class="bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-indigo-500 transition shadow-lg shadow-indigo-500/20">Explorar
+                        Proyectos</a>
+                    <a href="#"
+                        class="border border-white/10 px-8 py-4 rounded-xl font-bold hover:bg-white/5 transition">Descargar
+                        CV</a>
                 </div>
-                <!-- Modal body -->
-                <div class="p-4 md:p-5 space-y-4">
-                    <p class="text-base leading-relaxed text-gray-300">
-                        Prolinko es un sitio web desarrollado en Laravel, PHP y Tailwind CSS, con base de datos MySQL. Especializado en la gestión financiera familiar, calcula presupuestos, organiza ingresos, gastos, ahorros y deudas. Permite vincular cuentas entre usuarios y garantiza seguridad mediante cifrado de datos para una experiencia confiable y protegida.
-                    </p>
-    
-                </div>
-                <!-- Modal footer -->
-                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <a href="https://prolinko.site" rel="noopener" data-modal-hide="default-modal" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" target="_blank">Ver online</a>
+            </div>
+            <div class="relative" data-aos="zoom-in">
+                <div class="absolute -inset-4 bg-indigo-500/20 blur-3xl rounded-full"></div>
+                <div class="relative bg-slate-900/50 border border-white/10 p-2 rounded-3xl backdrop-blur-xl">
+                    <div class="bg-[#0f172a] rounded-2xl p-6 border border-white/5 shadow-2xl">
+                        <div class="flex space-x-2 mb-6">
+                            <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                        </div>
+                        <div class="mono text-sm space-y-2">
+                            <p class="text-indigo-400"># WAN Consolidation Project</p>
+                            <p class="text-emerald-400">Status: <span class="animate-pulse">Active</span></p>
+                            <p class="text-slate-500">--------------------------</p>
+                            <p class="text-pink-400">CORE: Cisco Catalyst 9000 Series</p>
+                            <p class="text-pink-400">Security: FortiGate HA</p>
+                            <p class="text-pink-400">SLAs: 99.99% Guaranteed</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div id="default-modalBakery" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-2xl max-h-full">
-            <!-- Modal content -->
-            <div class="relative bg-gray-700 rounded-lg shadow">
-                <!-- Modal header -->
-                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-white">
-                        Easy Bakery
-                    </h3>
-                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modalBakery">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                        </svg>
-                        <span class="sr-only">Close modal</span>
-                    </button>
-                </div>
-                <!-- Modal body -->
-                <div class="p-4 md:p-5 space-y-4">
-                    <p class="text-base leading-relaxed text-gray-300">
-                        Portal culinario especializado en recetas de
-                        panadería, destacándose por su diseño atractivo y
-                        funcionalidad robusta. Desarrollado en el ecosistema de
-                        Laravel, aplicando patrones MVC y funcionalidades CRUD
-                        en Backend. Frontend diseñado con HTML, CSS, Bootstrap y
-                        Javascript para una experiencia de usuario dinámica.
-                    </p>
-    
-                </div>
-                <!-- Modal footer -->
-                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <a href="https://easybakery.online" rel="noopener" data-modal-hide="default-modal" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" target="_blank">Ver online</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="default-modalMonamur" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-2xl max-h-full">
-            <!-- Modal content -->
-            <div class="relative bg-gray-700 rounded-lg shadow">
-                <!-- Modal header -->
-                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-white">
-                        Monamur
-                    </h3>
-                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modalMonamur">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                        </svg>
-                        <span class="sr-only">Close modal</span>
-                    </button>
-                </div>
-                <!-- Modal body -->
-                <div class="p-4 md:p-5 space-y-4">
-                    <p class="text-base leading-relaxed text-gray-300">
-                        Tienda online especializada en ventas de articulos de prenda
-                        , se destaca por su diseño atractivo y
-                        funcionalidad robusta. Desarrollado en el ecosistema de
-                        Laravel, aplicando patrones MVC y funcionalidades CRUD
-                        en Backend. Frontend diseñado con HTML, CSS, Bootstrap y
-                        Javascript para una experiencia de usuario dinámica.
-                    </p>
-    
-                </div>
-                <!-- Modal footer -->
-                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <button type="button" rel="noopener" data-modal-hide="default-modal" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">En desarrollo</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <header>
-        <nav class="border-gray-200 dark:bg-gray-900">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-              <a href="https://nalvez.vercel.app" class="flex items-center space-x-3 rtl:space-x-reverse">
-                  <img src="images/favicon.jpg" style="border-radius: 2px;" class="h-9" alt="Nicolas Alvez Logo" />
-              </a>
-              <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-                  <span class="sr-only">Open main menu</span>
-                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                  </svg>
-              </button>
-              <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:border-gray-700">
-                  <li>
-                    <a href="#" class="block navy py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
-                  </li>
-                  <li>
-                    <a href="#sobre-mi" class="block navy py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Sobre mí</a>
-                  </li>
-                  <li>
-                    <a href="#formacion" class="block navy py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Formación</a>
-                  </li>
-                <!--
-                  <li>
-                    <a href="#proyectos" class="block navy py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Proyectos</a>
-                  </li>
-                -->
-                  <li>
-                    <a href="#experiencia" class="block navy py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Experiencia</a>
-                  </li>
-                  <li>
-                    <a href="#contacto" class="block navy py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contacto</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-          
     </header>
-    <main>
-        <section class="block sm:flex pres">
-            <div class="w-full sm:w-1/2 mt-5 mobile" data-aos="fade-left">
-                <img class="mx-auto" src="images/cohete.svg" width="260" alt="Cohete">
-            </div>
-            <div class="w-full sm:w-1/2 name mx-auto" data-aos="fade-right">
-                <h1 class="sm:text-left text-white">Nicolás Alvez</h1>
-                <div class="flex">
-                    <span class="typed"></span>
-                </div>
-            </div>
-            <div class="w-full sm:w-1/2 text-center desktop" data-aos="fade-left">
-                <img src="images/cohete.svg" width="320" alt="Cohete">
-            </div>
-        </section>
-        <article class="sobreMi">
-            <div class="flex" id="sobre-mi">
-                <h3 class="text-white">Sobre mí</h3>
-                <lord-icon src="https://cdn.lordicon.com/gkgkfbzm.json" trigger="hover" colors="primary:#ffffff,secondary:#a39cf4" style="width:50px;height:50px">
-                </lord-icon>
-            </div>
-            <div class="mt-3 mb-10 block sm:flex">
-                <div class="block w-full sm:w-1/2" data-aos="fade-up">
-                    <p style="margin-top: 20px;" class="text-white m-auto text-justify px-2 sm:px-6 descripcion">Apasionado de la literatura, el deporte y la tecnología, con principal enfoque en la empatía, compromiso y el trabajo en equipo como pilares para lograr los objetivos en cada proyecto. Gran apertura para aprender y formarme en cosas nuevas que requieran un desafío que complementen día a día los conocimientos y experiencias ya adquiridas.</p>
-                    <a href="files/web-cv.pdf" target="_blank" class="button my-3">
-                        <span class="button__text">Currículum</span>
-                        <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35"
-                                id="bdd05811-e15d-428c-bb53-8661459f9307" data-name="Layer 2" class="svg">
-                                <path
-                                    d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z">
-                                </path>
-                                <path
-                                    d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z">
-                                </path>
-                                <path
-                                    d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z">
-                                </path>
-                            </svg>
-                        </span>
-                    </a>
-                </div>
-                <div class="w-full sm:w-1/2 text-center px-0 sm:px-6" data-aos="fade-up">
-                    <div class="palette">
-                        <div class="color"><span>#264653</span></div>
-                        <div class="color" style="background: linear-gradient(50deg, rgba(13,47,43,1) 6%, rgba(22,89,81,1) 37%, rgba(29,98,90,1) 60%, rgba(42,157,143,1) 95%);"><span>#2A9D8F</span></div>
-                        <div class="color" style="background: linear-gradient(50deg, rgba(77,64,35,1) 6%, rgba(94,80,45,1) 37%, rgba(171,141,67,1) 60%, rgba(233,196,106,1) 95%);"><span>#E9C46A</span></div>
-                        <div class="color" style="background: linear-gradient(50deg, rgba(77,51,30,1) 6%, rgba(96,63,37,1) 37%, rgba(156,104,63,1) 60%, rgba(244,162,97,1) 95%);"><span>#F4A261</span></div>
-                        <div class="color" style="background: linear-gradient(50deg, rgba(79,38,28,1) 6%, rgba(93,44,32,1) 35%, rgba(150,72,53,1) 60%, rgba(231,111,81,1) 95%);"><span>#E76F51</span></div>
-                    </div>
-                </div>
-            </div>
-            <section class="m-10 rounded-lg skills">
-                <h4 class="text-white p-5">~Skills</h4>
-                <div class="grid grid-cols-4 p-5" data-aos="fade-up">
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/cisco-img.png" alt="cisco-logo">
-                        <p>Cisco</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/fortinet.png" alt="fortinet-logo">
-                        <p>Fortinet</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/omada.png" alt="omada-logo">
-                        <p>Omada tp-link</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/unifi.png" alt="unifi-logo">
-                        <p>Ubiquiti</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/aruba.png" alt="aruba-logo">
-                        <p>Aruba</p>
-                    </div>
-                    <!--
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto" src="images/skills/HTML.png" alt="HTML">
-                        <p>HTML</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto" src="images/skills/CSS.png" width="70" alt="CSS">
-                        <p>CSS</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/Javascript.jpeg" width="70" alt="Javascript">
-                        <p>Javascript</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/PHP.jpg" width="70" alt="PHP">
-                        <p>PHP</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto" src="images/skills/laravel.png" width="70" alt="Laravel">
-                        <p>Laravel</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/react.png" width="70" alt="react">
-                        <p>React</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto" src="images/skills/git.png" width="70" alt="git">
-                        <p>Git</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/express.png" width="70" alt="express">
-                        <p>Express</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/jquery.jpg" width="70" alt="jquery">
-                        <p>Jquery</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/node.png" width="70" alt="node">
-                        <p>NodeJS</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/bootstrap.png" width="70" alt="bootstrap">
-                        <p>Bootstrap</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/tailwind.jpg" width="70" alt="tailwind">
-                        <p>Tailwind</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/laragon.jpg" width="70" alt="laragon">
-                        <p>Laragon</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/mariaDB.png" width="70" alt="mariaDB">
-                        <p>MariaDB</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/apache.png" width="70" alt="apache">
-                        <p>Apache</p>
-                    </div>
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/skills/phpunit.png" width="70" alt="php unit">
-                        <p>PHPUnit</p>
-                    </div>
-                    -->
-                </div>
-            </section>
 
-            <section class="my-12" data-aos="fade-up">
-                <div class="flex" id="formacion">
-                    <h3 class="text-white">Formación de desarrollo profesional</h3>
-                    <lord-icon
-                        class="mx-1"
-                        src="https://cdn.lordicon.com/lcvlsnre.json"
-                        trigger="hover"
-                        colors="primary:#a39cf4,secondary:#ffffff"
-                        style="width:50px;height:50px">
-                    </lord-icon>
+    <section id="infraestructura" class="py-32 bg-[#080808]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div data-aos="fade-up">
+                    <h2 class="text-4xl font-extrabold text-white mb-4">Networking & Security</h2>
+                    <p class="text-slate-500 max-w-xl">Administración de infraestructura crítica y optimización de
+                        servicios de telecomunicaciones.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <span
+                        class="px-4 py-2 bg-slate-900 border border-white/5 rounded-lg text-xs font-bold text-indigo-400">CISCO</span>
+                    <span
+                        class="px-4 py-2 bg-slate-900 border border-white/5 rounded-lg text-xs font-bold text-indigo-400">FORTINET</span>
+                    <span
+                        class="px-4 py-2 bg-slate-900 border border-white/5 rounded-lg text-xs font-bold text-indigo-400">UNIFI</span>
+                    <span
+                        class="px-4 py-2 bg-slate-900 border border-white/5 rounded-lg text-xs font-bold text-indigo-400">MIKROTIK</span>
+                    <span
+                        class="px-4 py-2 bg-slate-900 border border-white/5 rounded-lg text-xs font-bold text-indigo-400">ARUBA</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-white/5 border border-white/5 rounded-3xl hover:border-indigo-500/50 transition-all group"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500 transition-colors">
+                        <svg class="w-6 h-6 text-indigo-400 group-hover:text-white" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Seguridad WAN</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Configuración de firewalls Fortinet y gestión de
+                        túneles IPsec Site-to-Site para entornos multi-cloud.</p>
+                </div>
+                <div class="p-8 bg-white/5 border border-white/5 rounded-3xl hover:border-indigo-500/50 transition-all group"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500 transition-colors">
+                        <svg class="w-6 h-6 text-indigo-400 group-hover:text-white" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10 10 0 0114.142 0M2.828 9.9a15 15 0 0121.214 0">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Core Networking</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Administración de switches Cisco Catalyst y
+                        despliegue de soluciones SD-WAN escalables para corporativos.</p>
+                </div>
+                <div class="p-8 bg-white/5 border border-white/5 rounded-3xl hover:border-indigo-500/50 transition-all group"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500 transition-colors">
+                        <svg class="w-6 h-6 text-indigo-400 group-hover:text-white" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Monitoreo Avanzado</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Análisis de tráfico con Wireshark y supervisión
+                        proactiva mediante PRTG e iPerf para garantizar SLAs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="experiencia" class="py-32 bg-[#050505] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16" data-aos="fade-up">
+                <span class="mono text-indigo-400 text-sm mb-2 block">// Roadshow Profesional</span>
+                <h2 class="text-4xl font-extrabold text-white uppercase tracking-tighter">Trayectoria <span
+                        class="text-indigo-500">&</span> Logros</h2>
+            </div>
+
+            <div class="space-y-12">
+                <div class="relative group" data-aos="fade-up">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl blur opacity-10 group-hover:opacity-25 transition duration-500">
+                    </div>
+                    <div class="relative bg-white/5 border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-sm">
+                        <div class="flex flex-col md:flex-row justify-between mb-8 gap-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-1">Analista de Redes y Telecomunicaciones
+                                </h3>
+                                <p class="text-indigo-400 font-semibold">Laboratorio Elea</p>
+                            </div>
+                            <div class="text-right">
+                                <span
+                                    class="px-4 py-2 bg-indigo-500/20 text-indigo-300 rounded-full text-xs font-bold mono">ENERO
+                                    2026 — PRESENTE</span>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <ul class="space-y-4 text-slate-400 text-sm leading-relaxed">
+                                <li class="flex items-start">
+                                    <span class="text-indigo-500 mr-2">▹</span>
+                                    Implementación de configuraciones avanzadas para el robustecimiento de la seguridad
+                                    perimetral corporativa.
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-indigo-500 mr-2">▹</span>
+                                    Administración integral de ecosistemas Fortinet: SD-WAN, VPNs site-to-site
+                                    redundantes y políticas granulares.
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-indigo-500 mr-2">▹</span>
+                                    Gestión de infraestructura Wireless mediante controladoras Unifi y optimización de
+                                    Switching/Routing.
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2 content-start">
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-400 mono">Invgate</span>
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-400 mono">Fortigate
+                                    HA</span>
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-400 mono">SD-WAN</span>
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-400 mono">Cisco
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group" data-aos="fade-up">
+                    <div class="relative bg-white/5 border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-sm">
+                        <div class="flex flex-col md:flex-row justify-between mb-8 gap-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-1">Analista de Redes y Telecomunicaciones
+                                </h3>
+                                <p class="text-slate-400 font-semibold">Tuteur SACIFIA</p>
+                            </div>
+                            <div class="text-right">
+                                <span
+                                    class="px-4 py-2 bg-white/5 text-slate-400 rounded-full text-xs font-bold mono">AGOSTO
+                                    2025 — ENERO 2026</span>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <ul class="space-y-4 text-slate-400 text-sm leading-relaxed">
+                                <li class="flex items-start">
+                                    <span class="text-slate-500 mr-2">▹</span>
+                                    Implementación de configuraciones avanzadas para el robustecimiento de la seguridad
+                                    perimetral corporativa.
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-slate-500 mr-2">▹</span>
+                                    Administración integral de ecosistemas Fortinet: SD-WAN, VPNs site-to-site
+                                    redundantes y políticas granulares.
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-slate-500 mr-2">▹</span>
+                                    Configuración de infraestructura crítica: Cisco Switches, WLC, APs y Firewalls
+                                    Fortigate.
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-slate-500 mr-2">▹</span>
+                                    Gestión de infraestructura Wireless mediante controladoras Unifi y optimización de
+                                    Switching/Routing.
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2 content-start">
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-500 mono">Fortinet</span>
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-500 mono">Unifi</span>
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-500 mono">Invgate</span>
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-500 mono">Aruba</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group" data-aos="fade-up">
+                    <div class="relative bg-white/5 border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-sm">
+                        <div class="flex flex-col md:flex-row justify-between mb-8 gap-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-1">Analista de Redes y Telecomunicaciones
+                                </h3>
+                                <p class="text-slate-400 font-semibold">Newsan S.A</p>
+                            </div>
+                            <div class="text-right">
+                                <span
+                                    class="px-4 py-2 bg-white/5 text-slate-400 rounded-full text-xs font-bold mono">OCT
+                                    2022 — AGOSTO 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <ul class="space-y-4 text-slate-400 text-sm leading-relaxed">
+                                <li class="flex items-start">
+                                    <span class="text-slate-500 mr-2">▹</span>
+                                    Despliegue y mantenimiento de redes LAN/WAN para tiendas Motorola y entornos
+                                    industriales.
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-slate-500 mr-2">▹</span>
+                                    Monitoreo proactivo de tráfico y salud de red utilizando SNMPc, Zabbix y Grafana.
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-slate-500 mr-2">▹</span>
+                                    Configuración de infraestructura crítica: Cisco Switches, WLC, APs y Firewalls
+                                    Fortigate.
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-slate-500 mr-2">▹</span>
+                                    Soporte Nivel 2/3 y resolución de incidencias complejas mediante Jira Service
+                                    Management.
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2 content-start">
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-500 mono">Cisco
+                                    WLC</span>
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-500 mono">Zabbix/Grafana</span>
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-500 mono">Jira</span>
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-500 mono">Aruba</span>
+                                <span
+                                    class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-slate-500 mono">TP-LINK
+                                    Enterprise</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+            <div data-aos="fade-right">
+                <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-indigo-500 pl-4">Formación Académica
+                </h3>
+                <div class="space-y-8">
+                    <div class="relative pl-6 border-l border-white/10">
+                        <div class="absolute w-2 h-2 bg-indigo-500 rounded-full -left-[4.5px] top-2"></div>
+                        <p class="text-white font-bold text-sm uppercase">Cisco Certified Network Associate (CCNA)</p>
+                        <p class="text-slate-500 text-xs">Educación IT</p>
+                    </div>
+                    <div class="relative pl-6 border-l border-white/10">
+                        <div class="absolute w-2 h-2 bg-indigo-500 rounded-full -left-[4.5px] top-2"></div>
+                        <p class="text-white font-bold text-sm uppercase">Introduction to Cybersecurity</p>
+                        <p class="text-slate-500 text-xs">Network Academy Cisco</p>
+                    </div>
+                    <div class="relative pl-6 border-l border-white/10">
+                        <div class="absolute w-2 h-2 bg-indigo-500 rounded-full -left-[4.5px] top-2"></div>
+                        <p class="text-white font-bold text-sm uppercase">Programación Web Full Stack</p>
+                        <p class="text-slate-500 text-xs">Academia DePC</p>
+                    </div>
+                    <div class="relative pl-6 border-l border-white/10">
+                        <div class="absolute w-2 h-2 bg-indigo-500 rounded-full -left-[4.5px] top-2"></div>
+                        <p class="text-white font-bold text-sm uppercase">Fortigate Administrator</p>
+                        <p class="text-slate-500 text-xs">Udemy Training</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+    <section id="desarrollo" class="py-32 bg-black">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-20 items-center">
+            <div class="flex-1" data-aos="fade-right">
+                <h2 class="text-4xl font-extrabold text-white mb-8">Software for <br> Infrastructure.</h2>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1 p-2 bg-indigo-500/20 rounded-lg text-indigo-400 italic font-bold">L</div>
+                        <div>
+                            <h4 class="text-white font-bold">Laravel & Full-stack</h4>
+                            <p class="text-slate-500 text-sm">Desarrollo de herramientas internas para gestión de
+                                inventario IP y monitoreo de VLANs.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="mt-1 p-2 bg-pink-500/20 rounded-lg text-pink-400 italic font-bold">P</div>
+                        <div>
+                            <h4 class="text-white font-bold">Python for Automation</h4>
+                            <p class="text-slate-500 text-sm">Scripts de automatización vía SSH para respaldos masivos
+                                de configuraciones Cisco.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 w-full" data-aos="fade-left">
+                <div class="grid grid-cols-2 gap-4">
+                    <div
+                        class="h-64 bg-white/5 rounded-3xl border border-white/5 p-6 flex flex-col justify-end group hover:bg-indigo-600 transition-all cursor-default">
+                        <p class="text-xs text-indigo-400 group-hover:text-white/70 mb-2 uppercase tracking-tighter">
+                            Auth System</p>
+                        <p class="text-white font-bold">Laravel 2FA & QR Implementation</p>
+                    </div>
+                    <div
+                        class="h-64 bg-white/5 rounded-3xl border border-white/5 p-6 flex flex-col justify-end mt-12 group hover:bg-indigo-600 transition-all cursor-default">
+                        <p class="text-xs text-indigo-400 group-hover:text-white/70 mb-2 uppercase tracking-tighter">
+                            Monitoring Tool</p>
+                        <p class="text-white font-bold">IP Reservation & VLAN UI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dev-portfolio" class="py-32 bg-black relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6" data-aos="fade-up">
+                <div>
+                    <span class="mono text-indigo-400 text-sm mb-2 block">// Desarrollo Full-Stack</span>
+                    <h2 class="text-4xl font-extrabold text-white uppercase tracking-tighter">Proyectos <span class="text-indigo-500">Destacados</span></h2>
+                </div>
+                <p class="text-slate-500 max-w-md text-sm leading-relaxed">
+                    Soluciones web robustas enfocadas en la optimización de procesos y presencia digital corporativa.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="group relative overflow-hidden rounded-3xl bg-slate-900 border border-white/5" data-aos="fade-right">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?q=80&w=1200" alt="PLC Automatizaciones" 
+                             class="w-full h-full object-cover opacity-50 group-hover:scale-110 group-hover:opacity-30 transition-all duration-700">
+                    </div>
                     
-                </div>
-                <div class="block sm:flex">
-                    <div class="w-full sm:w-1/2 p-5">
-                        <div class="formacion flex">
-                            <img src="images/depc.png" alt="DePC">
-                            <div class="block p-3">
-                                <h4>Programación web Full Stack</h4>
-                                <p class="text-white">DePC</p>
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black via-black/60 to-transparent">
+                        <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="text-2xl font-bold text-white mb-2">PLC Automatizaciones</h3>
+                            <p class="text-slate-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                Landing page corporativa y plataforma de servicios. Implementación de arquitectura MVC para gestión de contenidos y diseño responsivo de alta precisión.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 text-[10px] font-bold mono rounded-md border border-indigo-500/30">LARAVEL</span>
+                                <span class="px-3 py-1 bg-sky-500/20 text-sky-400 text-[10px] font-bold mono rounded-md border border-sky-500/30">TAILWIND</span>
+                                <span class="px-3 py-1 bg-orange-500/20 text-orange-400 text-[10px] font-bold mono rounded-md border border-orange-500/30">MARIADB</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="w-full sm:w-1/2 p-5">
-                        <div class="formacion flex">
-                            <img src="images/UTN_logo.jpg" alt="UTN">
-                            <div class="block p-3">
-                                <h4>Tecnicatura en programación web</h4>
-                                <p class="text-white">Universidad Tecnológica Nacional</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block sm:flex">
-                    <div class="w-full sm:w-1/2 p-5">
-                        <div class="formacion flex">
-                            <img src="images/educacionit.jpg" alt="Educacion IT">
-                            <div class="block p-3">
-                                <h4>Fundamentos de Redes CCNA1 V7</h4>
-                                <p class="text-white">Educacion IT</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full sm:w-1/2 p-5">
-                        <div class="formacion flex">
-                            <img src="images/udemy.png" alt="Educacion IT">
-                            <div class="block p-3">
-                                <h4>Firewall Fortinet</h4>
-                                <p class="text-white">Udemy</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--
-            <section class="my-10">
-                <div class="flex mb-5" id="proyectos">
-                    <h3 class="text-white">Mis proyectos</h3>
-                    <lord-icon src="https://cdn.lordicon.com/xynjytfp.json" trigger="hover" colors="primary:#ffffff,secondary:#7166ee" style="width:50px;height:50px">
-                    </lord-icon>
-                </div>
-                <div class="grid grid-cols-1 gap-1 sm:grid-cols-3 sm:gap-3">
-                    <div class="p-10 my-4" data-aos="fade-up">
-                        <div class="max-w-sm bg-gray-800 border border-gray-800 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="rounded-t-lg" src="images/Prolinko.png" alt="Prolinko" />
+                            
+                            <a href="https://plcautomatizaciones.com" target="_blank" class="inline-flex items-center text-white text-sm font-bold hover:text-indigo-400 transition">
+                                VISITAR SITIO 
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </a>
-                            <div class="p-5">
-                                <a href="https://prolinko.site" rel="noopener" target="_blank">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Prolinko</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-white dark:text-gray-400">Plataforma de administración económica creada en Laravel, PHP, Tailwind, Javascript y MySQL.</p>
-                                <button type="button" data-modal-target="default-modalProlinko" data-modal-toggle="default-modalProlinko" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Ver más
-                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-10 my-4 mx-0 sm:mx-5" data-aos="fade-up">
-                        <div class="max-w-sm bg-gray-800 border border-gray-800 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="rounded-t-lg" src="images/easybakery.png" alt="Easy Bakery" />
-                            </a>
-                            <div class="p-5">
-                                <a href="https://easybakery.online" rel="noopener" target="_blank">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Easy Bakery</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-white dark:text-white">Sitio web full stack en Laravel, Tailwind, Bootstrap, Vite, y MySQL en BBDD.</p>
-                                <bottom type="bottom" data-modal-target="default-modalBakery" data-modal-toggle="default-modalBakery" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Ver más
-                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                    </svg>
-                                </bottom>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-10 my-4 mx-0 sm:mx-5" data-aos="fade-up">
-                        <div class="max-w-sm bg-gray-800 border border-gray-800 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a href="#">
-                                <img class="rounded-t-lg" src="images/Monamur.png" alt="Monamur" />
-                            </a>
-                            <div class="p-5">
-                                <a href="https://nalvez.vercel.app" rel="noopener" target="_blank">
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">Monamur</h5>
-                                </a>
-                                <p class="mb-3 font-normal text-white dark:text-white">Sitio web full stack en PHP y Laravel con MariaDB en BBDD</p>
-                                <bottom type="bottom" data-modal-target="default-modalMonamur" data-modal-toggle="default-modalMonamur" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Ver más
-                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                    </svg>
-                                </bottom>
-                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            -->
-            <section class="my-10">
-                <div class="flex mb-5" id="experiencia">
-                    <h3 class="text-white">Experiencia laboral</h3>
-                    <lord-icon src="https://cdn.lordicon.com/rfgxevig.json" trigger="hover" colors="primary:#ffffff,secondary:#7166ee" style="width:50px;height:50px">
-                    </lord-icon>
-                </div>
-                <div class="block sm:flex">
-                    <div class="w-full sm:w-1/2 p-5" data-aos="fade-up">
-                        <div class="formacion flex">
-                            <img src="images/newsan.png" alt="Newsan">
-                            <div class="block p-3">
-                                <h4>Analísta de redes SSR</h4>
-                                <p class="text-white">Newsan | 2022 Octubre - Agosto 2025</p>
-                            </div>
-                        </div>
+
+                <div class="group relative overflow-hidden rounded-3xl bg-slate-900 border border-white/5" data-aos="fade-left">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=1200" alt="Espacio Viña" 
+                             class="w-full h-full object-cover opacity-50 group-hover:scale-110 group-hover:opacity-30 transition-all duration-700">
                     </div>
-                    <div class="w-full sm:w-1/2 p-5" data-aos="fade-up">
-                        <div class="formacion flex">
-                            <img src="images/tuteur_logo.jpg" alt="Tuteur">
-                            <div class="block p-3">
-                                <h4>Analísta de redes SSR</h4>
-                                <p class="text-white">Tuteur | Agosto 2025 - Presente</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="m-10 rounded-lg skills">
-                <h4 class="text-white p-5">~Insignias y Certificados</h4>
-                <div class="grid grid-cols-4 p-5" data-aos="fade-up">
-                    <div class="text-center justify-items-center tech py-4">
-                        <img class="mx-auto rounded-lg" src="images/cyber.png" alt="cisco-logo">
-                        <p>Introduction to Cybersecurity</p>
-                    </div>
-                </div>
-            </section>
-        </article>
-        <footer class="my-10 text-center" id="contacto">
-            <lord-icon src="https://cdn.lordicon.com/wzrwaorf.json" trigger="hover" colors="primary:#ffffff,secondary:#7166ee" style="width:100px;height:100px">
-            </lord-icon>
-            <h4 class="text-white">Contacto</h4>
-            <p class="text-white">¡Podes contactarme por las siguientes redes!</p>
-            <div class="my-5 text-center items-center" data-aos="flip-left">
-                <div class="card mx-auto mt-3">
-                    <a href="https://www.instagram.com/niico_alvez/" class="socialContainer containerOne">
-                      <svg class="socialSvg instagramSvg" viewBox="0 0 16 16"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path> </svg>
-                    </a>
-                      
-                    <a href="https://www.linkedin.com/in/nicol%C3%A1s-alvez-7a7943232/" class="socialContainer containerThree">
-                      <svg class="socialSvg linkdinSvg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
-                    </a>
                     
-                    <a href="https://wa.me/541122512561" class="socialContainer containerFour">
-                      <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16"> <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path> </svg>
-                    </a>
-                  </div>    
+                    <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black via-black/60 to-transparent">
+                        <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="text-2xl font-bold text-white mb-2">Espacio Vina</h3>
+                            <p class="text-slate-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                Desarrollo a medida enfocado en la experiencia de usuario y gestión de base de datos relacional para catálogo de productos.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 text-[10px] font-bold mono rounded-md border border-indigo-500/30">LARAVEL</span>
+                                <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-[10px] font-bold mono rounded-md border border-yellow-500/30">JS / CSS</span>
+                                <span class="px-3 py-1 bg-orange-500/20 text-orange-400 text-[10px] font-bold mono rounded-md border border-orange-500/30">MARIADB</span>
+                            </div>
+                            
+                            <a href="https://espaciovina.com" target="_blank" class="inline-flex items-center text-white text-sm font-bold hover:text-indigo-400 transition">
+                                VISITAR SITIO 
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
-    </main>
-    <script>
-        const skillsSection = document.querySelector('.skills');
-        const colorElements = document.querySelectorAll('.color');
+        </div>
+    </section>
 
-        // Agregar un listener de clic a cada elemento de color
-        colorElements.forEach(colorElement => {
-            colorElement.addEventListener('click', () => {
-                // Obtener el fondo del color clicado
-                const backgroundColor = colorElement.style.background;
 
-                // Establecer el fondo de la sección de habilidades al fondo del color clicado
-                skillsSection.style.background = backgroundColor;
-            });
-        });
-    </script>
+    <footer id="contacto" class="py-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold text-white mb-6">¿Listo para escalar tu infraestructura?</h2>
+            <p class="text-slate-500 mb-10">Disponible para proyectos de consultoría en redes y desarrollo de software
+                industrial.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:nalvez.developer@gmail.com"
+                    class="text-white hover:text-indigo-400 transition underline underline-offset-8 decoration-indigo-500">nalvez.developer@gmail.com</a>
+            </div>
+            <div class="mt-20 text-xs text-slate-600 uppercase tracking-widest">
+                © 2026 Nicolas Alvez. Desarrollado con Laravel & Tailwind.
+            </div>
+        </div>
+    </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
-      </script>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="js/typed.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 
 </html>
